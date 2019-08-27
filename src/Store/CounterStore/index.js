@@ -11,6 +11,8 @@ class CounterStore {
   @action decrementCounter = () => {
     this.counter = this.counter - 1;
   };
-  @action resetCounter = () => {};
+  @action resetCounter = () => {
+    this.counter = 0;
+  };
 }
 export default CounterStore;
