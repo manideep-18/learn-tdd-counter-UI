@@ -1,4 +1,9 @@
 CounterStore
     [x]incrementCounter
-    [*]decrementCounter
-    []resetCounter
+    [x]decrementCounter
+    [x]resetCounter
+
+CounterComponent
+    [*]IncrementButton
+    []DecrementButton
+    []ResetButton
