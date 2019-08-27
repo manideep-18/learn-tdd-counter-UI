@@ -11,4 +11,10 @@ describe("CounterStore testing", () => {
     counterStore.decrementCounter();
     expect(counterStore.counter).toBe(-1);
   });
+  it("should test reset counter to 0", () => {
+    const counterStore = new CounterStore();
+    counterStore.decrementCounter();
+    counterStore.resetCounter();
+    expect(counterStore.counter).toBe(0);
+  });
 });
