@@ -12,9 +12,9 @@ class CounterComponent extends Component {
   handleClick = () => {
     const onSelect = this.props.select;
     if (onSelect === "Increment") this.props.counterStore.incrementCounter();
-    else if (onSelect === "Decrement")
-      this.props.counterStore.decrementCounter();
-    else this.props.counterStore.resetCounter();
+    else if (onSelect === "Decrement") {
+      //   this.props.counterStore.decrementCounter();
+    } else this.props.counterStore.resetCounter();
   };
   handleDecrementClick = () => {
     //   this.props.counterStore.decrementCounter();

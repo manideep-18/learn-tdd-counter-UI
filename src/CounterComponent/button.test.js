@@ -35,4 +35,14 @@ describe("button rendering ", () => {
     const decrementButton = getByText("Decrement");
     expect(decrementButton).toBeDefined();
   });
+  it("should test Decrement Button handleClick function", () => {
+    const counterStore = new CounterStore();
+    const { getByText } = render(
+      <Provider counterStore={counterStore}>
+        <CounterComponent select="Decrement" />
+      </Provider>
+    );
+    fireEvent.click(getByText("Decrement"));
+    expect(counterStore.counter).toBe(-1);
+  });
 });
