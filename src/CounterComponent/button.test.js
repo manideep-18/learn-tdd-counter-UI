@@ -49,7 +49,7 @@ describe("button rendering ", () => {
     const counterStore = new CounterStore();
     const { getByText } = render(
       <Provider counterStore={counterStore}>
-        <CounterComponent />
+        <CounterComponent select="Reset" />
       </Provider>
     );
     const resetButton = getByText("Reset");
