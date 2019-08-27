@@ -1,12 +1,7 @@
 import React, { Component } from "react";
-import {
-  CounterComponentBg,
-  IncrementButton,
-  DecrementButton,
-  CurrentButton
-} from "./styledComponents";
+import { CounterComponentBg, CurrentButton } from "./styledComponents";
 import { inject } from "mobx-react";
-import { observer } from "mobx-react-lite";
+
 @inject("counterStore")
 class CounterComponent extends Component {
   handleClick = () => {
@@ -21,7 +16,6 @@ class CounterComponent extends Component {
   render() {
     return (
       <CounterComponentBg>
-        {this.props.counterStore.counter}
         <CurrentButton onClick={this.handleClick}>
           {this.props.select}
         </CurrentButton>
