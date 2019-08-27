@@ -55,4 +55,15 @@ describe("button rendering ", () => {
     const resetButton = getByText("Reset");
     expect(resetButton).toBeDefined();
   });
+  it("should test Reset Button handleClick function", () => {
+    const counterStore = new CounterStore();
+    const { getByText } = render(
+      <Provider counterStore={counterStore}>
+        <CounterComponent select="Reset" />
+      </Provider>
+    );
+    counterStore.incrementCounter();
+    fireEvent.click(getByText("Reset"));
+    expect(counterStore.counter).toBe(0);
+  });
 });
