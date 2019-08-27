@@ -4,13 +4,13 @@ import { inject } from "mobx-react";
 @inject("counterStore")
 class CounterComponent extends Component {
   handleClick = () => {
-    this.props.counterStore.IncrementCounter();
+    this.props.counterStore.incrementCounter();
   };
   render() {
     return (
       <CounterComponentBg>
         {this.props.counterStore.counter}
-        <IncrementButton>Increment</IncrementButton>
+        <IncrementButton onClick={this.handleClick}>Increment</IncrementButton>
       </CounterComponentBg>
     );
   }
