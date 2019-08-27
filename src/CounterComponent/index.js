@@ -15,7 +15,7 @@ class CounterComponent extends Component {
     else if (onSelect === "Decrement")
       this.props.counterStore.decrementCounter();
     else {
-      //   this.props.counterStore.resetCounter();
+      this.props.counterStore.resetCounter();
     }
   };
   render() {
