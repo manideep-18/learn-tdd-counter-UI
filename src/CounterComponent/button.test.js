@@ -45,4 +45,14 @@ describe("button rendering ", () => {
     fireEvent.click(getByText("Decrement"));
     expect(counterStore.counter).toBe(-1);
   });
+  it("should test Reset Button render in UI", () => {
+    const counterStore = new CounterStore();
+    const { getByText } = render(
+      <Provider counterStore={counterStore}>
+        <CounterComponent />
+      </Provider>
+    );
+    const resetButton = getByText("Reset");
+    expect(resetButton).toBeDefined();
+  });
 });
