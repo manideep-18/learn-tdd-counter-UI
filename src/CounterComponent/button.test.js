@@ -29,7 +29,7 @@ describe("button rendering ", () => {
     const counterStore = new CounterStore();
     const { getByText } = render(
       <Provider counterStore={counterStore}>
-        <CounterComponent />
+        <CounterComponent select="Decrement" />
       </Provider>
     );
     const decrementButton = getByText("Decrement");
