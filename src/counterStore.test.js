@@ -6,4 +6,9 @@ describe("CounterStore testing", () => {
     counterStore.incrementCounter();
     expect(counterStore.counter).toBe(1);
   });
+  it("should test decrement counter with 0", () => {
+    const counterStore = new CounterStore();
+    counterStore.decrementCounter();
+    expect(counterStore.counter).toBe(-1);
+  });
 });

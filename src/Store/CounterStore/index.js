@@ -8,5 +8,6 @@ class CounterStore {
   @action incrementCounter = () => {
     this.counter = this.counter + 1;
   };
+  @action decrementCounter = () => {};
 }
 export default CounterStore;

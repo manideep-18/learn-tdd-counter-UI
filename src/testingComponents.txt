@@ -1,4 +1,4 @@
 CounterStore
-    [*]incrementCounter
-    []decrementCounter
+    [x]incrementCounter
+    [*]decrementCounter
     []resetCounter
