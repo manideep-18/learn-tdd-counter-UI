@@ -9,7 +9,7 @@ describe("button rendering ", () => {
     const counterStore = new CounterStore();
     const { getByText } = render(
       <Provider counterStore={counterStore}>
-        <CounterComponent />
+        <CounterComponent select="Increment" />
       </Provider>
     );
     const incrementButton = getByText("Increment");
@@ -19,11 +19,20 @@ describe("button rendering ", () => {
     const counterStore = new CounterStore();
     const { getByText } = render(
       <Provider counterStore={counterStore}>
-        <CounterComponent />
+        <CounterComponent select="Increment" />
       </Provider>
     );
     fireEvent.click(getByText("Increment"));
     expect(counterStore.counter).toBe(1);
-    //const counterInstance = getByText.getInstance();
+  });
+  it("should test Decrement Button render in UI", () => {
+    const counterStore = new CounterStore();
+    const { getByText } = render(
+      <Provider counterStore={counterStore}>
+        <CounterComponent />
+      </Provider>
+    );
+    const decrementButton = getByText("Decrement");
+    expect(decrementButton).toBeDefined();
   });
 });

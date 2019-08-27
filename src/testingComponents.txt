@@ -4,6 +4,6 @@ CounterStore
     [x]resetCounter
 
 CounterComponent
-    [*]IncrementButton
-    []DecrementButton
+    [x]IncrementButton
+    [*]DecrementButton
     []ResetButton

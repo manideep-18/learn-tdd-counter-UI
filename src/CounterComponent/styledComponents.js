@@ -1,3 +1,4 @@
 import styled from "styled-components";
 export const CounterComponentBg = styled.div``;
-export const IncrementButton = styled.button``;
+export const CurrentButton = styled.button``;
+export const DecrementButton = styled.button``;
